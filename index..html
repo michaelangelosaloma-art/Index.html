@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+
+    <!-- Cute Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #87ceeb; /* Sky blue background */
+            display: flex;
+            justify-content: flex-start; /* Align left */
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 50px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 350px;
+            border: 2px solid #ffffff;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 18px 30px rgba(0,0,0,0.3);
+        }
+
+        .image-box {
+            width: 100%; /* Full width of container */
+            height: 200px;
+            border: 2px solid #1e90ff;
+            overflow: hidden;
+            border-radius: 10px; /* Box shape */
+            margin-bottom: 20px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .line {
+            border-bottom: 1px dashed #87cefa;
+            margin: 10px 0;
+            padding-bottom: 5px;
+            color: #2c3e50;
+            transition: background-color 0.3s ease;
+        }
+
+        .line:hover {
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+
+        .line strong {
+            color: #1e90ff;
+        }
+
+        .cute-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #1e90ff, #00bfff);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .cute-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #00bfff, #1e90ff);
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            color: pink;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-800px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-box">
+        <img src="profile.jpeg" alt="Profile Photo">
+    </div>
+
+    <div class="line"><strong>Name:</strong> Saloma Michael Angelo (Kel)</div>
+    <div class="line"><strong>Course:</strong> Bachelor of Science in Computer Science</div>
+    <div class="line"><strong>Section:</strong> 1B</div>
+    <div class="line">
+        <strong>Bit Info:</strong><br>
+        I am from Dasmariñas.<br>
+        I am 19 years old.<br>
+        My hobbies are playing online games and drawing.<br>
+        You can call me Kel.
+    </div>
+
+    <button class="cute-btn" onclick="showMessage()">Click Me 💖</button>
+</div>
+
+<div class="heart" style="left:10%;">💗</div>
+<div class="heart" style="left:30%; animation-delay:2s;">💖</div>
+<div class="heart" style="left:50%; animation-delay:4s;">💘</div>
+<div class="heart" style="left:70%; animation-delay:1s;">💕</div>
+<div class="heart" style="left:90%; animation-delay:3s;">💞</div>
+
+<script>
+    function showMessage() {
+        alert("Hi Kel from Dasmariñas! 🌸✨ Keep shining!");
+    }
+</script>
+
+</body>
+</html>
